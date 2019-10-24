@@ -9,6 +9,8 @@ function getTime() {
 }
 
 function convertToCelsius() {
+function convertToCelsius(event) {
+  event.preventDefault();
   let currentTemp = document.querySelector("#current-temp");
   let fahrenheit = currentTemp.innerHTML;
   let celsius = Math.round((fahrenheit - 32) * (5 / 9));
@@ -22,6 +24,8 @@ function convertToCelsius() {
 }
 
 function convertToFahrenheit() {
+function convertToFahrenheit(event) {
+  event.preventDefault();
   let currentTemp = document.querySelector("#current-temp");
   let celsius = currentTemp.innerHTML;
   let fahrenheit = Math.round((celsius * 9) / 5 + 32);
