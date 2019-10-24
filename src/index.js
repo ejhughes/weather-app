@@ -79,8 +79,14 @@ function showLocalTemperature(response) {
   let location = response.data.name;
   let h1 = document.querySelector("h1");
   let currentTemperature = document.querySelector("#current-temp");
+  let humidityPercentage = response.data.main.humidity;
+  console.log(response.data);
+  console.log("humidity", humidityPercentage);
+  let humidity = document.querySelector("#humidity");
+  //   let precipitation = document.querySelector("#precipitation")
   h1.innerHTML = location;
   currentTemperature.innerHTML = temperature;
+  humidity.innerHTML = `${humidityPercentage}%`;
 }
 
 function getLocalTemperature(lat, lon) {
