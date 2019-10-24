@@ -8,7 +8,6 @@ function getTime() {
   currentTime.innerHTML = `${hour}:${minute}`;
 }
 
-function convertToCelsius() {
 function convertToCelsius(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#current-temp");
@@ -23,7 +22,6 @@ function convertToCelsius(event) {
   currentTemp.innerHTML = celsius;
 }
 
-function convertToFahrenheit() {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#current-temp");
