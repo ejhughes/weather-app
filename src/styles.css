@@ -1,0 +1,189 @@
+body {
+  font-family: "Lato", sans-serif;
+  padding: 30px 0px;
+}
+
+h1 {
+  color: #00b7a8;
+  font-size: 42xpx;
+  margin-top: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #096386;
+  color: #00b7a8;
+  color: #3157aa;
+  color: #094a86;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+  min-width: 130px;
+  padding: 0px 0px 0 0px;
+  text-align: center;
+}
+
+h3 {
+  color: #3c4245a4;
+  font-size: 12px;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+h5 {
+  color: #00b7a8;
+  font-size: 14px;
+}
+
+header {
+  color: #3c4245;
+  font-size: 14px;
+}
+
+footer {
+  color: #3c4245;
+  font-size: 16px;
+  text-align: center;
+}
+
+small {
+  font-weight: 100;
+}
+
+.col-sm-2 {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+}
+
+.col-6 {
+  display: block;
+  margin: 0 5;
+  flex: auto;
+}
+
+.container {
+  background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+  border-radius: 6px;
+  max-width: 600px;
+
+  padding: 20px 30px;
+}
+
+.conditions {
+  line-height: 16px;
+  margin-top: 20px 0 0 0;
+  min-width: 100px;
+  text-align: center;
+}
+
+.conditions-percent {
+  font-weight: bold;
+  line-height: 16px;
+  text-align: left;
+}
+
+.current-date {
+  color: #094a86;
+  display: block;
+  font-size: 16px;
+  margin: 20px 0 20px 0;
+}
+
+.current-temp-container {
+  position: relative;
+  margin: 50px 0 0 0;
+}
+
+.date,
+.forecast-icon,
+.highs-lows {
+  text-align: center;
+}
+
+.date {
+  line-height: 14px;
+}
+
+.forecast {
+  border-radius: 4px;
+  margin: 50px auto 0 auto;
+}
+
+.forecast-icon {
+  color: #096386;
+  background-image: linear-gradient(-225deg, #fffeff 0%, #09628656 100%);
+  border-radius: 25px;
+  font-size: 32px;
+  margin: 10px 0 5px 0;
+}
+
+.highs-lows {
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
+.main {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.main-icon {
+  color: #f8c700;
+}
+
+.recent {
+  font-size: 12px;
+}
+
+.search-bar {
+  border: none;
+  background: #fff;
+  box-shadow: 0 0 10px 0px #97979760;
+}
+
+.search-button {
+  background: #97979731;
+  border: 0;
+  box-shadow: 0 0 10px 0px #97979760;
+  position: relative;
+  top: -2px;
+}
+
+.swap {
+  display: block;
+  font-size: 10px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.units {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  vertical-align: top;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.unitF:hover,
+.unitC:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: #094a86;
+}
+
+.active:hover {
+  color: #094a86;
+  cursor: default;
+  text-decoration: none;
+}
+
+a,
+a:hover {
+  color: #3c424586;
+}

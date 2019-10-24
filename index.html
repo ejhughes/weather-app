@@ -4,11 +4,180 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/9f96d4d68c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+
+    <title>Weather app</title>
+    <style></style>
   </head>
+
   <body>
-    <h1>
-      Weather app
-    </h1>
+    <div class="container shadow">
+      <div class="search">
+        <form id="searchForm">
+          <input
+            type="text"
+            id="searchInput"
+            class=" search-bar"
+            placeholder="Enter a city"
+          />
+
+          <button
+            type="submit"
+            id="searchSubmit"
+            class="search-button btn btn-light btn-sm "
+          >
+            <i class="fas fa-search"></i>
+          </button>
+
+          <button
+            id="local-weather"
+            class="search-button btn btn-light btn-sm "
+          >
+            <i class="fas fa-map-marker-alt"></i>
+            &nbsp Current location
+          </button>
+        </form>
+      </div>
+
+      <div class="row main">
+        <div class="col-sm-6">
+          <span class="current-date" id="currentDate"></span>
+          <h1></h1>
+
+          <h3>Last updated <span id="currentTime"></span></h3>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="current-temp-container">
+            <h2>
+              <i class="main-icon fas fa-sun"></i>&nbsp<span
+                class="current-temp"
+                id="current-temp"
+              ></span
+              >&nbsp
+              <span class="units">
+                <a href="#" class="unitC" id="convertToC">ºC</a> |
+                <a href="#" class="unitF" id="convertToF">ºF</a>
+              </span>
+            </h2>
+          </div>
+          <h5 class="conditions">
+            Precipitation: &nbsp<span class="conditions-percent">0%</span>
+            <br />
+            Humidity: &nbsp &nbsp &nbsp &nbsp<span class="conditions-percent"
+              >20%</span
+            >
+          </h5>
+        </div>
+      </div>
+
+      <div class="row forecast">
+        <div class="col-sm-2">
+          <header class="date">
+            <small>
+              Monday
+            </small>
+
+            <br />
+            07 Oct
+          </header>
+          <div class="forecast-icon">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <footer class="highs-lows">
+            26º |
+            <small>18º</small>
+          </footer>
+        </div>
+        <div class="col-sm-2">
+          <header class="date">
+            <small>
+              Tuesday
+            </small>
+            <br />
+            08 Oct
+          </header>
+          <div class="forecast-icon">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <footer class="highs-lows">
+            26º |
+            <small>16º</small>
+          </footer>
+        </div>
+        <div class="col-sm-2">
+          <header class="date">
+            <small>Wednesday</small>
+            <br />
+            09 Oct
+          </header>
+          <div class="forecast-icon">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <footer class="highs-lows">
+            22º |
+            <small>14º</small>
+          </footer>
+        </div>
+        <div class="col-sm-2">
+          <header class="date">
+            <small>Thursday</small>
+            <br />
+            10 Oct
+          </header>
+          <div class="forecast-icon">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <footer class="highs-lows">
+            23º |
+            <small>14º</small>
+          </footer>
+        </div>
+        <div class="col-sm-2">
+          <header class="date">
+            <small>Friday</small>
+            <br />
+            11 Oct
+          </header>
+          <div class="forecast-icon">
+            <i class="fas fa-sun"></i>
+          </div>
+          <footer class="highs-lows">
+            24º |
+            <small>16º</small>
+          </footer>
+        </div>
+        <div class="col-sm-2">
+          <header class="date">
+            <small>Saturday</small>
+            <br />
+            12 Oct
+          </header>
+          <div class="forecast-icon">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <footer class="highs-lows">
+            23º |
+            <small>15º</small>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
