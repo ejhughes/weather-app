@@ -70,6 +70,12 @@ small {
   padding: 20px 30px;
 }
 
+.open-src-code {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
 .conditions {
   line-height: 16px;
   margin-top: 20px 0 0 0;
