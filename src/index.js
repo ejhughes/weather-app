@@ -36,7 +36,7 @@ function convertToFahrenheit(event) {
   currentTemp.innerHTML = fahrenheit;
 }
 
-function getTemperature(temperature) {
+function getTemperature() {
   let celsiusLink = document.querySelector("#convertToC");
   let fahrenheitLink = document.querySelector("#convertToF");
   celsiusLink.classList.add("active");
@@ -57,14 +57,16 @@ function displaySearchResults(response) {
 
 function findWeather(locationName) {
   let location = locationName;
-  /////////////INPUT ERROR HANDLING//////////////////////////////////////////////
   if (location.trim() === "") {
     alert("Please enter a valid location.");
   } else {
     let units = "metric";
     let apiKey = "75a21bee5cae9bb0d2bc680304e5f690";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(displaySearchResults);
+    axios
+      .get(apiUrl)
+      .then(displaySearchResults)
+      .catch(handleError);
   }
 }
 
@@ -72,6 +74,12 @@ function search(event) {
   event.preventDefault();
   let location = searchInput.value;
   findWeather(location);
+}
+
+function handleError(error) {
+  if (error.response.status === 404) {
+    alert("We could not find that location. Try again!");
+  }
 }
 
 ////Current Location
@@ -82,10 +90,7 @@ function showLocalTemperature(response) {
   let h1 = document.querySelector("h1");
   let currentTemperature = document.querySelector("#current-temp");
   let humidityPercentage = response.data.main.humidity;
-  console.log(response.data);
-  console.log("humidity", humidityPercentage);
   let humidity = document.querySelector("#humidity");
-  //   let precipitation = document.querySelector("#precipitation")
   h1.innerHTML = location;
   currentTemperature.innerHTML = temperature;
   humidity.innerHTML = `${humidityPercentage}%`;
@@ -166,3 +171,16 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 findWeather("Lisbon");
 getDate();
 getTime();
+
+function findForecast(location) {
+  let units = "metric";
+  let apiKey = "75a21bee5cae9bb0d2bc680304e5f690";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.list);
+}
+
+findForecast("Lisbon");
