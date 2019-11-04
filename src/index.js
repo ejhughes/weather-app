@@ -50,8 +50,12 @@ function displaySearchResults(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#current-temp");
 
+  let humidityPercentage = response.data.main.humidity;
+  let humidity = document.querySelector("#humidity");
+
   h1.innerHTML = `${location}`;
   currentTemperature.innerHTML = temperature;
+  humidity.innerHTML = `${humidityPercentage}%`;
   getTemperature(temperature);
 }
 
@@ -171,6 +175,8 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 findWeather("Lisbon");
 getDate();
 getTime();
+
+////////////////////////////////////
 
 function findForecast(location) {
   let units = "metric";
